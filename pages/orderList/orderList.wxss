@@ -1,0 +1,21 @@
+/* pages/orderList/orderList.wxss */
+#container{
+    padding: 0 20rpx 130rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.orderList .listItem{
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+    border-radius: 8rpx;
+    background-color: #fff;
+}
+
+.shopName{
+    margin-bottom: 10rpx;
+    font-size: 28rpx;
+}
+
+.orderPrice,.reachTime{
+    color: #505050;
+}

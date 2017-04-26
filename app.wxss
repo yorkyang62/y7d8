@@ -1,0 +1,46 @@
+/**app.wxss**/
+
+page{
+  height: 100%;
+  background-color: #f6f6f6;
+  color: #000;
+  font-family: "微软雅黑";
+  font-size: 12px;
+}
+
+.orange{
+  color: #ec771a;
+}
+
+.float_l{
+  float: left;
+}
+
+.float_r{
+  float: right;
+}
+
+.text_r{
+  text-align: right;
+}
+
+.titleLineThrough{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.titleLineThrough .middelBorder{
+  height: 28rpx;
+  border-bottom: 2rpx solid #e8e8e8;
+}
+
+.titleLineThrough .titleRealText{
+  margin-top: -30rpx;
+}
+
+.titleRealText text{
+  padding: 0 30rpx;
+  background-color: #f6f6f6;
+}

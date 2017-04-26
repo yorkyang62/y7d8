@@ -1,0 +1,106 @@
+
+<!--<view class="container">
+  <view wx:for="{{array}}">
+  {{index}}: {{item.message}}
+</view>
+  <image src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image>
+  <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">选择器</navigator>
+</view>-->
+<view class="shadow" wx:if="{{showLikeList}}"></view>
+<view id="container">
+
+  <!--<view id="banner"><image style="width: 750rpx; height: 200rpx; display:block;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></view>-->
+  <view class="container_l">
+    <view class="{{currentTab==index ? 'on' : ''}}" catchtap="swichNav" data-current="{{index}}" wx:for="{{array}}">{{item.category_name}}</view>
+
+    <!--<view class="{{currentTab==1 ? 'on' : ''}}" catchtap="swichNav" data-current="1">12道风味</view>
+    <view class="{{currentTab==2 ? 'on' : ''}}" catchtap="swichNav" data-current="2">家乡菜</view>-->
+  </view>
+  <view class="container_r">
+    <view>
+      <view class="titleLineThrough">
+        <view class="middelBorder"></view>
+        <view class="titleRealText">
+          <text>{{array[currentTab].category_name}}</text>
+        </view>
+      </view>
+      <view class="dishList">
+        <view class="dishItem" wx:for="{{array[currentTab].goods_list}}">
+
+          <!--<view class="btn_want" wx:if="{{shareMenu&&inviteUser}}">想吃</view>-->
+          <view class="btn_want" wx:if="{{item.is_like}}" data-want="{{item.is_like}}" data-index="{{index}}" catchtap="tabWant">想吃 {{item.goods_like_num}}</view>
+          <view class="btn_want want_able" wx:else="{{item.is_like}}" data-want="{{item.is_like}}" data-index="{{index}}" catchtap="tabWant">想吃 {{item.goods_like_num}}</view>
+
+          <!--<view class="btn_want" wx:if="{{item.want}}" data-want="{{item.is_like}}" data-index="{{index}}" catchtap="tabWant">取消</view>
+          <view class="btn_want want_able" wx:if="{{!item.is_like}}">点菜</view>-->
+          <navigator url="../menu/menu?invite_uid=2987DE9C-9B79-B0D7-D594-1FE2A221B89F&token=eb16f6cf8b15eff966b6622974e3d3af&user_menu_id=2&restuarant_id=rest1">
+            <image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image>
+          </navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">{{item.goods_name}}</navigator>
+          <view class="dishPrice">￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!--<view>
+      <view class="titleLineThrough">
+        <view class="middelBorder"></view>
+        <view class="titleRealText"><text>12道风味</text></view>
+      </view>
+      <view class="dishList">
+        <view class="dishItem">
+          <view class="btn_want">想吃 1</view>
+          <navigator url="../picker/picker?title=navigate"><image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">XO豆腐</navigator>
+          <view class="dishPrice">￥3</view>
+        </view>
+        <view class="dishItem">
+          <view class="btn_want">想吃 1</view>
+          <navigator url="../picker/picker?title=navigate"><image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">XO豆腐</navigator>
+          <view class="dishPrice">￥3</view>
+        </view>
+        <view class="dishItem">
+          <view class="btn_want">想吃 1</view>
+          <navigator url="../picker/picker?title=navigate"><image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">XO豆腐</navigator>
+          <view class="dishPrice">￥3</view>
+        </view>
+        <view class="dishItem">
+          <view class="btn_want">想吃 1</view>
+          <navigator url="../picker/picker?title=navigate"><image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">XO豆腐</navigator>
+          <view class="dishPrice">￥3</view>
+        </view>
+        <view class="dishItem">
+          <view class="btn_want">想吃 1</view>
+          <navigator url="../picker/picker?title=navigate"><image style="width: 138rpx; height: 138rpx;" src="http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"></image></navigator>
+          <navigator url="../picker/picker?title=navigate" hover-class="navigator-hover">XO豆腐</navigator>
+          <view class="dishPrice">￥3</view>
+        </view>
+      </view>
+    </view>-->
+  </view>
+  <view class="likeList" wx:if="{{showLikeList}}">
+    <image src="../../img/closeBtn.png" class="btn_close" catchtap="likeListToggle"></image>
+    <view class="likeListCont">
+      <view wx:for="{{array}}" wx:for-item="item">
+        <view wx:for="{{item.goods_list}}" wx:for-item="item2" wx:if="{{item2.goods_like_num>0}}">
+          <view class="float_r">{{item2.goods_like_num}}人想吃</view>{{item2.goods_name}}</view>
+      </view>
+    </view>
+  </view>
+  <view id="menu_action" class="text_r">
+    <navigator class="btn_order float_l" url="../orderList/orderList">
+      <image src="../../img/orderBtn.png"></image>
+      <view>订单</view>
+    </navigator>
+    <!--<view class="btn_order float_l">
+    </view>-->
+    <view class="total_num">我想吃
+      <text>{{totalNum}}</text> 道菜/
+      <text>￥{{totalProce}}</text>
+    </view>
+    <view class="btn_confirm" catchtap="likeListToggle">点菜汇总</view>
+  </view>
+</view>

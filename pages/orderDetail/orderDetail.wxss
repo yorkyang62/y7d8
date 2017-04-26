@@ -1,0 +1,26 @@
+/* pages/orderList/orderList.wxss */
+#container{
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.detailBlock{
+    margin-bottom: 20rpx;
+    border-radius: 8rpx;
+    background-color: #fff;
+}
+
+.detailBlock .detailItem{
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 20rpx;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.detailBlock .detailItem:last-child{
+    border: none;
+}
+
+.numberAndPrice{
+    width: 260rpx;
+}

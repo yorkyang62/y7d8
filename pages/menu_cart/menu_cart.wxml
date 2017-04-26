@@ -1,0 +1,28 @@
+<view id="container">
+    <view class="dist_list">
+        <view class="dist_list_title list_item">
+            <text class="list_cont_l">点菜汇总</text>
+            <text class="list_cont_m">*{{totalNum}}</text>
+            <text class="list_cont_r orange">￥{{totalProce}}</text>
+        </view>
+        <view class="dist_list_item list_item" wx:for="{{likeList}}">
+            <view class="list_cont_l">
+                <icon type="success_circle" color="orange" wx:if="{{item.slected&&item.selectNum>0}}" data-index="{{index}}" catchtap="tapSelect"/>
+                <icon type="circle" wx:if="{{!item.slected||item.selectNum==0}}" data-index="{{index}}" catchtap="tapSelect"/>
+                <navigator url="../orderList/orderList?title=navigate" hover-class="navigator-hover">{{item.goods_name}}</navigator>
+                <text>{{item.goods_number}}人想吃</text>
+            </view>
+            <view class="list_cont_m">
+                <view class="btn_less float_l" data-index="{{index}}" catchtap="minusNum">-</view>{{item.selectNum}}<view class="btn_more float_r" data-index="{{index}}" catchtap="addNum">＋</view>
+            </view>
+            <view class="list_cont_r">￥{{item.goods_price}}</view>
+        </view>
+    </view>
+    <view class="dist_option">
+        <view class="list_item">到店时间</view>
+        <view class="dish_remark list_item"><view>备注</view><input placeholder="请输入备注"/></view>
+    </view>
+    <view class="btn_action">
+        <button class="btn_confirm" type="default" size="default" bindtap="default" hover-class="other-button-hover">提交菜单</button>
+    </view>
+</view>

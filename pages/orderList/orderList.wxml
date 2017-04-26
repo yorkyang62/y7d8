@@ -1,0 +1,38 @@
+<view id="container">
+    <view class="titleLineThrough">
+        <view class="middelBorder"></view>
+        <view class="titleRealText"><text>正在进行中</text></view>
+    </view>
+    <view class="orderList">
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">待餐厅接单</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">待餐厅接单</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">待餐厅接单</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+    </view>
+    <view class="titleLineThrough">
+        <view class="middelBorder"></view>
+        <view class="titleRealText"><text>已完成</text></view>
+    </view>
+    <view class="orderList">
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">已完成</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">已完成</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+        <navigator url="../orderDetail/orderDetail?title=navigate" class="listItem">
+            <view><text class="orderStatus float_r orange">已完成</text><view class="shopName">俏江南-紫风店</view></view>
+            <view><text class="orderPrice float_r">￥204</text><view class="reachTime">到店时间 周六 7/31 18:00</view></view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/menu/menu",
+    "pages/menu_cart/menu_cart",
+    "pages/orderList/orderList",
+    "pages/orderDetail/orderDetail",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/picker/picker"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#411c00",
+    "navigationBarTitleText": "wechat",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  }
+}

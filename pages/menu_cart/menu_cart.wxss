@@ -1,0 +1,117 @@
+/* pages/menu_cart/menu_cart.wxss */
+#container{
+    padding: 20rpx 20rpx 130rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.list_item{
+    padding: 0 20rpx;
+}
+
+.dist_list{
+    border: 1px solid #f6f6f6;
+    background-color: #fff;
+}
+
+.dist_list_title{
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #f6f6f6;
+    font-size: 28rpx;
+}
+
+.dist_list_item{
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1rpx solid #f6f6f6;
+}
+
+.list_cont_l{
+    width: 310rpx;
+    float: left;
+    vertical-align: middle;
+}
+
+.list_cont_m{
+    width: 207rpx;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.list_cont_r{
+    width: 150rpx;
+    float: left;
+    text-align: right;
+}
+
+.list_cont_l icon{
+    margin: 0 10rpx 0 0;
+    padding-top: 24rpx;
+    width: 46rpx;
+    height: 46rpx;
+    float: left;
+}
+
+.list_cont_l navigator{
+    margin-top: 12rpx;
+    line-height: 48rpx;
+}
+
+.list_cont_l text{
+    line-height: 10rpx;
+    display: block;
+    font-size: 18rpx;
+    color: #505050;
+}
+
+.btn_less,.btn_more{
+    margin-top: 30rpx;
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border: 1px solid #969696;
+    font-size: 34rpx;
+    color: #969696;
+}
+
+.dist_option{
+    margin-top: 20rpx;
+    background-color: #fff;
+}
+
+.dist_option .list_item{
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #f6f6f6;
+    font-size: 28rpx;
+}
+
+.dish_remark{
+   display: flex;
+}
+
+.dish_remark view{
+   width: 120rpx;
+}
+
+.dish_remark input{
+    height: 80rpx;
+    line-height: 80rpx;
+    flex: 1;
+}
+
+.btn_action{
+    padding: 0 20rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 20rpx;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.btn_confirm{
+    width: 100%;
+    background-color: #ec771a;
+    color: #fff;
+}
